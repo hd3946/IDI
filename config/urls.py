@@ -1,6 +1,5 @@
 from django.conf import settings
 from django.urls import include, path
-from django.conf.urls import include, url
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.views.generic import TemplateView
@@ -33,7 +32,7 @@ urlpatterns = [
 )
 
 urlpatterns += [
-    url(r'^', views.ReactAppView.as_view()),
+    path("", views.ReactAppView.as_view()),
 ]
 
 if settings.DEBUG:
