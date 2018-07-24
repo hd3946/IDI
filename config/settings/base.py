@@ -73,7 +73,6 @@ THIRD_PARTY_APPS = [
     'taggit_serializer',
     'rest_auth',  # rest auth
     'rest_auth.registration',
-    'imagekit',
     'corsheaders',
 ]
 LOCAL_APPS = [
