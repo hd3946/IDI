@@ -14,23 +14,30 @@ ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['example.com'])
 #DATABASES['default']['ATOMIC_REQUESTS'] = True  # noqa F405
 #DATABASES['default']['CONN_MAX_AGE'] = env.int('CONN_MAX_AGE', default=60)  # noqa F405
 
+# DATABASE CONFIGURATION
+# ------------------------------------------------------------------------------
+
+# Use the Heroku-style specification
+# Raises ImproperlyConfigured exception if DATABASE_URL not in os.environ
 DATABASES = {
-    'default' : {
-        'ENGINE': 'diango.db.backends.postgresql_psycopg2',
-        'NAME' : env('RDS_DB_NAME'),
-        'USER' : env('RDS_DB_USERNAME'),
-        'PASSWORD' : env('RDS_DB_PASSWORD'),
-        'HOST' : env('RDS_DB_HOSTNAME'),
-        'PORT' : env('RDS_DB_PORT'),
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': env('RDS_DB_NAME'),
+        'USER': env('RDS_DB_USERNAME'),
+        'PASSWORD': env('RDS_DB_PASSWORD'),
+        'HOST': env('RDS_DB_HOSTNAME'),
+        'PORT': env('RDS_DB_PORT'),
     }
 }
 
+REDIS_LOCATION = '{0}/{1}'.format(env('REDIS_URL',
+                                      default='redis://127.0.0.1:6379'), 0)
 # CACHES
 # ------------------------------------------------------------------------------
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': env('REDIS_URL'),
+        'LOCATION': REDIS_LOCATION,   
         'OPTIONS': {
             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
             # Mimicing memcache behavior.
