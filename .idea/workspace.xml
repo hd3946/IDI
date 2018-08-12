@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="244e9988-d31c-4e3a-ac73-af58e2ebc31e" name="Default" comment="" />
+    <list default="true" id="244e9988-d31c-4e3a-ac73-af58e2ebc31e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -81,12 +83,6 @@
               <item name="idi" type="462c0819:PsiDirectoryNode" />
               <item name="frontend" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="idi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="idi" type="462c0819:PsiDirectoryNode" />
-              <item name="frontend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -125,12 +121,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1534067616434</updated>
-      <workItem from="1534067617664" duration="471000" />
+      <workItem from="1534067617664" duration="725000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="471000" />
+    <option name="totallyTimeSpent" value="725000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="289" y="96" width="1228" height="853" extended-state="0" />
