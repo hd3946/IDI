@@ -4,7 +4,7 @@ from io import BytesIO
 from urllib.request import urlopen
 from django.core.files import File
 
-
+# facebook에서 가져오는 정보를 통해 User모델에 데이터를 맵핑!!
 @receiver(user_signed_up)
 def user_signed_up(request, user, **kwargs):
     if len(user.socialaccount_set.all()) > 0:
